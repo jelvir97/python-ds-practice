@@ -13,3 +13,12 @@ def find_the_duplicate(nums):
         >>> find_the_duplicate([2, 1, 3, 4]) is None
         True
     """
+
+    nums_dict = dict([(char, nums.count(char)) for char in nums])
+
+    for (num ,count) in nums_dict.items():
+        if count == 2:
+            return num
+        
+    return None
+    
