@@ -22,3 +22,5 @@ def valid_parentheses(parens):
         >>> valid_parentheses(")()(")
         False
     """
+    new_str = parens.replace('()','')
+    return new_str == ''

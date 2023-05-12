@@ -29,3 +29,11 @@ def is_odd_string(word):
     """
 
     # Hint: you may find the ord() function useful here
+
+    alph = 'abcdefghijklmnopqrstuvwxyz'
+    sum = 0
+
+    for char in word:
+        sum += alph.index(char.lower()) + 1
+    
+    return sum % 2 == 1
